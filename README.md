@@ -6,7 +6,7 @@ ALGORITMOS B
 
 - Conteúdo Principal: structs, modularização e ponteiros.
 
-Introdução ao C++ (Comparativo com C)
+INTRODUÇÃO AO C++ (COMPARATIVO COM C)
 
 #include <iostream>
 #include <string>
@@ -33,7 +33,7 @@ int main() {
     return 0;
 }
 
-Atalhos e Comandos Úteis do Terminal
+ATALHOS E COMANDOS ÚTEIS DO TERMINAL
 
 - Ctrl + L: Limpa a tela do terminal.
 - Compilação:
@@ -43,7 +43,7 @@ Atalhos e Comandos Úteis do Terminal
 
 ## 03/08/2026
 
-Geração de Números Aleatórios
+GERAÇÃO DE NÚMEROS ALEÁTORIOS 
 Para trabalhar com valores randômicos em C++, precisamos incluir duas bibliotecas essenciais:
 
 - #include <cstdlib> // Contém a função rand()
