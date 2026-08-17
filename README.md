@@ -82,11 +82,16 @@ do {
 
 ## 10/08/2026
 
-- push_back serve para que o vetor não precise ter um tamanho definido inicialmente, permitindo que ele seja dinâmico e aumente conforme novos elementos são adicionados.
-- vetor.size() é utilizado para saber quantos elementos existem dentro de um vetor dinâmico. Como não sabemos previamente o tamanho dele, usamos o size() na condição do for para percorrer todos os elementos.
-- #include <string> é utilizado para podermos trabalhar com textos e palavras dentro do programa.
-- #include <vector> é utilizado para criar e manipular vetores dinâmicos, que podem aumentar de tamanho conforme novos itens são adicionados.
+- `push_back`: permite adicionar novos elementos ao vetor sem precisar definir seu tamanho antecipadamente. Dessa forma, o vetor funciona de maneira dinâmica e pode crescer conforme novos dados são inseridos.
 
+- `vetor.size()`: retorna a quantidade de elementos existentes no vetor. Como o tamanho de um vetor dinâmico pode variar, o `size()` é utilizado na condição do `for` para percorrer todos os elementos.
+
+- `#include <string>`: permite trabalhar com textos e strings no programa.
+
+- `#include <vector>`: permite utilizar vetores dinâmicos, que podem aumentar de tamanho conforme novos elementos são adicionados.
+
+- `typedef struct`:
+```cpp
 typedef struct {
     string placa;
     string cor;
@@ -94,7 +99,7 @@ typedef struct {
     string horaSaida;
 } Veiculo;
 
-Essa estrutura foi criada para armazenar as informações de cada veículo. Assim, sempre que um carro for cadastrado na garagem, seus dados, como placa, cor, horário de entrada e horário de saída, ficam organizados nesse modelo.
+Essa estrutura organiza as informações de cada veículo. Assim, cada carro cadastrado possui sua placa, cor, horário de entrada e horário de saída armazenados.
 
-- vector<Veiculo> garagem cria um vetor dinâmico chamado garagem, que será utilizado para armazenar os veículos cadastrados.
-- garagem.push_back({placa, cor, horaEntrada, ""}); adiciona um novo veículo ao vetor garagem. Depois que o usuário informa os dados do carro, o push_back coloca essas informações dentro do vetor, deixando-as armazenadas   para serem utilizadas posteriormente.
+- vector<Veiculo> garagem: cria um vetor dinâmico chamado garagem, que será responsável por armazenar os veículos cadastrados.
+- garagem.push_back({placa, cor, horaEntrada, ""});: adiciona um novo veículo ao vetor garagem. Os dados informados pelo usuário são inseridos e ficam armazenados no vetor para serem utilizados posteriormente.
