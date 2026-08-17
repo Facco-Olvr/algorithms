@@ -82,4 +82,19 @@ do {
 
 ## 10/08/2026
 
+- push_back serve para que o vetor não precise ter um tamanho definido inicialmente, permitindo que ele seja dinâmico e aumente conforme novos elementos são adicionados.
+- vetor.size() é utilizado para saber quantos elementos existem dentro de um vetor dinâmico. Como não sabemos previamente o tamanho dele, usamos o size() na condição do for para percorrer todos os elementos.
+- #include <string> é utilizado para podermos trabalhar com textos e palavras dentro do programa.
+- #include <vector> é utilizado para criar e manipular vetores dinâmicos, que podem aumentar de tamanho conforme novos itens são adicionados.
 
+typedef struct {
+     string placa;
+     string cor;
+     string horaEntrada;
+     string horaSaida;
+ } Veiculo;
+
+Essa estrutura foi criada para armazenar as informações de cada veículo. Assim, sempre que um carro for cadastrado na garagem, seus dados, como placa, cor, horário de entrada e horário de saída, ficam organizados nesse modelo.
+
+- vector<Veiculo> garagem cria um vetor dinâmico chamado garagem, que será utilizado para armazenar os veículos cadastrados.
+- garagem.push_back({placa, cor, horaEntrada, ""}); adiciona um novo veículo ao vetor garagem. Depois que o usuário informa os dados do carro, o push_back coloca essas informações dentro do vetor, deixando-as armazenadas   para serem utilizadas posteriormente.
