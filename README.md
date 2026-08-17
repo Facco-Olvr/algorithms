@@ -88,11 +88,11 @@ do {
 - #include <vector> é utilizado para criar e manipular vetores dinâmicos, que podem aumentar de tamanho conforme novos itens são adicionados.
 
 typedef struct {
-     string placa;
-     string cor;
-     string horaEntrada;
-     string horaSaida;
- } Veiculo;
+    string placa;
+    string cor;
+    string horaEntrada;
+    string horaSaida;
+} Veiculo;
 
 Essa estrutura foi criada para armazenar as informações de cada veículo. Assim, sempre que um carro for cadastrado na garagem, seus dados, como placa, cor, horário de entrada e horário de saída, ficam organizados nesse modelo.
 
