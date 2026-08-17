@@ -74,3 +74,79 @@ int main() {
         // system("pause"; // Pausa para o usuário ler a mensagem
     } while (opcao != 3);
 }
+
+
+-- VERSÃO EM C 
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#define MAX_CLIENTES 100
+
+typedef struct {
+    int codigo;
+    int idade;
+    char telefone[20];
+} Cliente;
+
+int main(){
+    Cliente vetorClientes[MAX_CLIENTES];
+    int opcao, quantidadeClientes = 0;
+
+    do {
+        system("cls");
+        printf("Menu:\n");
+        printf("1. Cadastrar cliente\n");
+        printf("2. Listar clientes\n");
+        printf("3. Sair\n");
+        printf("Escolha uma opcao: ");
+        scanf("%d", &opcao);
+
+        switch(opcao){
+            case 1:
+                printf("cadastro de cliente\n");
+                if(quantidadeClientes == MAX_CLIENTES){
+                    printf("Limite de clientes atingido.\n");
+                } else {
+                    int codigo, idade;
+                    char telefone[20];
+
+                    printf("Digite o codigo do cliente: ");
+                    scanf("%d", &codigo);
+                    printf("Digite a idade do cliente: ");
+                    scanf("%d", &idade);
+                    printf("Digite o telefone do cliente: ");
+                    scanf("%s", telefone);
+
+                    vetorClientes[quantidadeClientes].codigo = codigo;
+                    vetorClientes[quantidadeClientes].idade = idade;
+                    strcpy(vetorClientes[quantidadeClientes].telefone, telefone);
+                    quantidadeClientes++;
+                }
+            break;
+
+            case 2:  
+                printf("clientes cadastrados:\n");
+                if(quantidadeClientes == 0){
+                    printf("Nenhum cliente cadastrado.\n");
+               } else {
+                    for(int i = 0; i < quantidadeClientes; i++){
+                        printf("Codigo: %d, Idade: %d, Telefone: %s\n", vetorClientes[i].codigo, vetorClientes[i].idade, vetorClientes[i].telefone);
+                        printf("-------------------------\n");
+                    }
+                }
+        }
+        system("pause");
+    } while(opcao != 3);
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
