@@ -1,7 +1,7 @@
-#include<iostream>
-#include<limits>
-#include<vector>
-#include<string>
+#include <iostream>
+#include <limits>
+#include <vector>
+#include <string>
 
 using namespace std;
 
@@ -16,7 +16,7 @@ int main(){
     int opcao;
     vector<carro> catalogo;
 
-    do{ 
+    do { 
         system("cls");
         cout << "--MENU--\n";
         cout << "1 - cadastrar veiculo\n";
@@ -26,7 +26,7 @@ int main(){
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
         switch(opcao){
-            case 1:{
+            case 1: {
                 string nome_mar;
                 int cod;
                 int ano;
@@ -43,13 +43,12 @@ int main(){
 
                 catalogo.push_back({nome_mar, cod, ano, preco});
 
-                cout <<"carro cadastrado com sucesso!!\n";
+                cout << "carro cadastrado com sucesso!!\n";
 
                 cin.ignore(numeric_limits<streamsize>::max(), '\n');
                 cin.get();
 
                 break;
-
             } 
 
             case 2: {
@@ -59,46 +58,46 @@ int main(){
                     cout << "nenhum veiculo registrado.\n";
                     cin.get();
                     break; 
-
                 } 
                 
                 cout << "informe o valor teto do preco: \n";
                 cin >> teto;
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
                 bool encontrado = false;
 
-                for(int i = 0; i < catalogo.size(); i++){
-
-                    if(catalogo[i].preco <== teto){
+                for(size_t i = 0; i < catalogo.size(); i++){
+                    if(catalogo[i].preco <= teto){
                         cout << "Modelo/Marca: " << catalogo[i].nome_mar << "\n";
                         cout << "Codigo: " << catalogo[i].cod << "\n";
                         cout << "Ano: " << catalogo[i].ano << "\n";
                         cout << "Preco: R$ " << catalogo[i].preco << "\n";
                         cout << "--------------------------\n";
-                             encontrado = true;
+                        encontrado = true;
                     }
                 }
 
                 if(!encontrado){
                     cout << "nenhum veiculo cadastrado com esse teto de preco!!\n";
                 }
-            }
+                
+                cin.get();
                 break;
             }
             
             case 3: {
                 cout << "\nsaindo do programa!!\n";
                 break;
-            }   
+            }    
+            
             default: {
                 cout << "\nopcao invalida!! pressione qualquer tecla para continuar. \n";
-
+                cin.get();
                 break;
             }
         } 
-        system("pause");
+        
     } while (opcao != 3);
 
     return 0;
 }
-
