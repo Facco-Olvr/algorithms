@@ -1,0 +1,96 @@
+# Anotações de Aula: Manipulação de Arquivos em C++
+
+Este documento contém os conceitos fundamentais sobre leitura e escrita de arquivos em C++, complementando as anotações da aula.
+
+---
+
+## 1. Leitura de Arquivos (`ifstream`)
+
+O `ifstream` (*input file stream*) é a ferramenta do C++ utilizada para abrir e ler o conteúdo de arquivos externos.
+
+### Exemplo Corrigido da Aula
+O código abaixo lê um arquivo linha por linha e imprime o conteúdo no console:
+
+```cpp
+#include <iostream>
+#include <fstream>  // Necessário para usar ifstream
+#include <string>   // Necessário para usar o tipo string
+
+using namespace std;
+
+int main() { 
+    // Abre o arquivo para leitura
+    ifstream arquivo("texto.txt");
+
+    // Verifica se o arquivo foi aberto com sucesso
+    if (!arquivo.is_open()) {
+        cout << "Erro ao abrir o arquivo!" << endl;
+        return 1;
+    }
+
+    string linha;
+
+    // Lê linha por linha até o final do arquivo: 
+    while (getline(arquivo, linha)) { 
+        cout << linha << endl;
+    }
+
+    // Fecha o arquivo liberando os recursos: 
+    arquivo.close(); 
+    
+    return 0;
+}
+```
+2. Escrevendo em Arquivos (ofstream)
+
+Assim como o ifstream serve para entrada (input), o ofstream (output file stream) é utilizado para criar e escrever dados em arquivos externos.
+
+    Se o arquivo especificado não existir no diretório, o C++ o cria automaticamente.
+
+    Por padrão, abrir um arquivo para escrita apaga todo o conteúdo anterior que estava nele.
+
+Exemplo Prático: Gravando dados
+
+```cpp
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+
+int main() {
+    // Abre o arquivo em modo append (adiciona no final sem apagar o anterior)
+    ofstream arquivo("texto.txt", ios::app);
+    
+    if (arquivo.is_open()) {
+        arquivo << "Nova linha adicionada via codigo!" << endl;
+        arquivo.close(); // Libera o arquivo
+    } else {
+        cout << "Erro ao abrir para escrita!" << endl;
+    }
+    
+    return 0;
+}
+```
+3. Modos de Abertura (ios_base)
+
+Você pode alterar o comportamento padrão de leitura e escrita passando bandeiras (flags) como segundo argumento:
+
+    ios::in: Abre o arquivo para leitura (padrão do ifstream).
+
+    ios::out: Abre o arquivo para escrita (padrão do ofstream).
+
+    ios::app: Adiciona o novo conteúdo no final do arquivo (append), preservando o que já estava escrito.
+
+    ios::trunc: Apaga todo o conteúdo do arquivo ao abrir (padrão).
+
+    4. Boas Práticas
+
+    Sempre verifique a abertura: Utilize if (!arquivo.is_open()) para evitar falhas ou comportamentos indesejados quando o arquivo não puder ser acessado.
+
+    Fechamento de arquivos: Embora o C++ feche os arquivos automaticamente quando a variável sai de escopo (graças ao conceito de RAII), chamar arquivo.close() explicitamente garante que os dados foram salvos no disco no momento desejado.
+    """
+
+with open("anotacoes_completas.md", "w", encoding="utf-8") as f:
+f.write(conteudo_md)
+
+print("Arquivo gerado com sucesso!")
