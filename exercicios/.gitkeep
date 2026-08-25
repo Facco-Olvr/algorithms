@@ -1,1 +1,87 @@
+#include<iostream>
+#include<string>
+#include<vector>
+#include<limits>
+
+using namespace std;
+
+typedef struct{
+    string name;
+    int num_conta;
+    double saldo;
+} conta;
+
+int main() {
+    vector<conta> sistema;
+    int opcao;
+
+    do{
+
+        cout << ("cls");
+        cout << "============\n";
+        cout << "--- MENU ---\n";
+        cout << "============\n";
+        cout << "1 - Cadastrar conta \n";
+        cout << "2 - Depositar \n";
+        cout << "3 - Mostrar todas as contas \n"
+        cout << "4 - Sair \n";
+        cout << " Escolha uma opcao\n";
+        cin >> opcao;
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+        switch(opcao){
+            case 1: {
+                string name;
+                int num_conta; 
+                double saldo;
+
+                cout << "Informe o nome do titular da conta bancária: \n";
+                getline(cin, name);
+                cout << "Informe o numero da conta bancária: \n";
+                cin >> num_conta;
+                cout << "Informe o saldo incial da conta: R$ \n";
+                cin >> saldo;
+                
+                sistema.push_back({name, num_conta, saldo});
+
+                cout << "Conta cadastrada com sucesso!!! \n";
+                cin.get();
+
+                break;
+            }
+
+            case 2: {
+                if(sistema.empty()){
+                    cout << "Nenhuma conta bancária no sistema!! \n";
+                    break;
+                }
+
+                int indice;
+                double valor_deposito;
+
+                cout << "\n --- Realizar depósito ---\n";
+                cout << "Informe a conta que deseja depositar: \n";
+                cout << "Contas disponiveis (Posicoes de 0 a " << sistema.size() - 1 << "): \n";
+                
+                for(size_t i = 0; i < sistema.size(); i++){
+                    cout << "Posicao de [" << i << "] -> Conta: " << sistema[i].num_conta << "Saldo: R$ " << sistema[i].saldo << "\n";
+                }
+
+                cout << "Escolha uma posicao (indice) da conta: \n";
+                cin >> indice; 
+
+                if(indice >= 0 && static_cast<size_t>(indice) < sistema.size){
+                    cout << "Digite o valor a depositar: R$ \n";
+                    cin >> valor_deposito;
+
+                }
+
+                if(valor_deposito > 0){
+                    sistema[indice].
+                }
+            } 
+        }
+    }  
+
+}
 
