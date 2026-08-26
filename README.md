@@ -20,6 +20,7 @@ Repositório dedicado aos códigos, exercícios e anotações da disciplina de A
 * 📄 [27/07/2026 - Introdução ao C++ e Comandos de Terminal](./anotacoes/2026-07-27.md)
 * 📄 [03/08/2026 - Números Aleatórios e Estruturas de Menu](./anotacoes/2026-08-03.md)
 * 📄 [10/08/2026 - Vetores Dinâmicos (vector) e Structs](./anotacoes/2026-08-10.md)
+* 📄 [24/08/2026 - Manipulação de Arquivos em C++](./anotacoes/2026-08-24.md)
 
 ---
 
