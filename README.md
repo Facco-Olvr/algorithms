@@ -2,7 +2,7 @@
 
 Repositório dedicado aos códigos, exercícios e anotações da disciplina de Algoritmos B.
 
-* **Professor:** Alexandre Zambelan ([@alexandrezambelan](https://github.com/alexandrezambelan))
+* **Professor:** Alexandre Zambelan ([@alexandrezambelan](https://github.com/alexandrezamberlan))
 * **Linguagens:** C / C++
 
 ---
