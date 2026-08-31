@@ -39,21 +39,29 @@ int main() {
 
         switch (opcao) {
             case 1: 
+                
                 cout << "Cadastro de cliente:\n";                
 
                 cout << "Informe o codigo do cliente: ";
                 cin >> codigo;
+                
                 cout << "Informe sua idade: ";
                 cin >> idade;
+            
                 cin.ignore(numeric_limits<streamsize>::max(), '\n');
                 
                 cout << "Informe seu telefone: ";
                 getline(cin, telefone);
+                
                 vetorClientes.push_back({codigo,idade,telefone});
+                
                 cout << "Cliente cadastrado com sucesso\n";
+                
                 break;
+            
             case 2: 
                 cout << "Clientes cadastrados:\n";
+                
                 if (vetorClientes.size() == 0) {
                     cout << "Nao ha clientes para exibir\n";
                 } else {
