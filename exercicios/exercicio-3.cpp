@@ -58,9 +58,6 @@ int main() {
                              << " | media: " << media;
                     }
                 }
-                
-                cout << "\npressione qualquer tecla para continuar\n";
-                cin.get();
                 break;
             }    
             case 3: { 
