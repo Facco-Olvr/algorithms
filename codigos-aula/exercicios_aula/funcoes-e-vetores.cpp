@@ -1,3 +1,10 @@
+2) construa um método chamado exercicio2 que receba como parâmetros:
+    - vetorA - com n numeros sorteados
+    - vetorB - com n numeros sorteados
+    - vetorResultado - que vai armazenar todos os números que aparecem nos dois vetores
+
+    ao final, o vetorResultado deve ter seus dados retornados.
+
 #include<iostream>
 #include<vector>
 #include<ctime>
