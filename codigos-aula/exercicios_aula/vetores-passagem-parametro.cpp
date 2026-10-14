@@ -1,3 +1,13 @@
+Use como base os códigos trabalhados:
+    - popularVetor()
+    - exibirVetor()
+
+1) construa um método chamado exercicio1 que receba como parâmetros:
+    - vetorA - com n numeros sorteados
+    - vetorB - com n numeros sorteados
+
+   e exiba os números que aparecem nos dois vetores
+
 #include<iostream>
 #include<vector>
 #include<ctime>
