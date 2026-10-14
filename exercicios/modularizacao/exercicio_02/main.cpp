@@ -5,18 +5,18 @@
 using namespace std;
 
 int main(){
-    string dia, mes, ano;
+    string ano, mes, dia;
 
-    cout << "escreva o dia: ";
-    cin >> dia;
+    cout << "Informe o ano: ";
+    cin >> ano;
 
-    cout << "escreva o mes: ";
+    cout << "Informe o mes: ";
     cin >> mes;
 
-    cout << "escreva o ano: ";
-    cin >> ano;
+    cout << "Informe o dia: ";
+    cin >> dia;
 
     receberdata(dia, mes, ano);
 
     return 0;
-} 
+}
