@@ -21,6 +21,8 @@ Repositório dedicado aos códigos, exercícios e anotações da disciplina de A
 * 📄 [03/08/2026 - Números Aleatórios e Estruturas de Menu](./anotacoes/2026-08-03.md)
 * 📄 [10/08/2026 - Vetores Dinâmicos (vector) e Structs](./anotacoes/2026-08-10.md)
 * 📄 [24/08/2026 - Manipulação de Arquivos em C++](./anotacoes/2026-08-24.md)
+* 📄 [24/08/2026 - Leitura de Arquivos em C++](./anotacoes/2026-09-14.md)
+* 📄 [24/08/2026 - Modularização e Funções em C++](./anotacoes/2026-09-28.md)
 
 ---
 
