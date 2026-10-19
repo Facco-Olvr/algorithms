@@ -9,9 +9,12 @@ Repositório dedicado aos códigos, exercícios e anotações da disciplina de A
 
 ## 📁 Estrutura do Repositório
 
-* **[anotacoes/](./anotacoes/)** — Resumos teóricos e anotações feitas em aula.
-* **[codigos-aula/](./codigos-aula/)** — Exemplos práticos e programas desenvolvidos durante as aulas.
-* **[exercicios/](./exercicios/)** — Listas de exercícios e atividades resolvidas.
+* [anotacoes/](./anotacoes/) — Resumos teóricos e anotações feitas em aula.
+* [codigos-aula/](./codigos-aula/) — Exemplos práticos e programas desenvolvidos durante as aulas.
+* [exercicios/](./exercicios/) — Listas de exercícios e atividades resolvidas:
+  * [exercicios/arquivo/](./exercicios/arquivo/) — Exercícios de leitura e manipulação de arquivos (`<fstream>`).
+  * [exercicios/modularizacao/](./exercicios/modularizacao/) — Exercícios divididos em arquivos de cabeçalho (`.h`) e execução (`main.cpp`).
+  * [exercicios/structs/](./exercicios/structs/) — Exercícios práticos focados em registros e estruturas de dados (`struct`).
 
 ---
 
