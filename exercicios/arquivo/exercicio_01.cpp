@@ -1,4 +1,4 @@
-**EXERCICIO PRÉ USO DE ARQUIVO TEXTO
+# EXERCICIO PRÉ USO DE ARQUIVO TEXTO
 
 #include <iostream>
 #include <string>
