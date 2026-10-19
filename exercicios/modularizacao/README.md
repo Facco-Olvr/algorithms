@@ -9,11 +9,3 @@ Esta pasta contém exercícios e exemplos práticos sobre **modularização de c
 - **Inclusão do Cabeçalho:** O arquivo principal (`main.cpp`) inclui o cabeçalho local através da diretiva `#include "funcoes.h"`.
 
 ---
-
-## 📁 Lista de Exercícios
-
-| Exercício | Descrição | Arquivos |
-| :--- | :--- | :--- |
-| **Exercício 01** | Função para contar a frequência de uma determinada letra dentro de uma palavra. | [`funcoes.h`](./exercicio_01/funcoes.h), [`main.cpp`](./exercicio_01/main.cpp) |
-
----
