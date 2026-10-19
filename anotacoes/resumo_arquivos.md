@@ -95,9 +95,6 @@ Ler: getline(nomeObjeto, linha); ou nomeObjeto >> variavel;
 
 Fechar: nomeObjeto.close();
 
-Como subir isso para o seu Git agora em 2 segundos:
-Abra o terminal na pasta do seu projeto e digite:
-
 Bash
 git add .
 git commit -m "Adicionando resumo de manipulacao de arquivos para consulta"
