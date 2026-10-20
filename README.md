@@ -30,22 +30,22 @@ Repositório dedicado aos códigos, exercícios e anotações da disciplina de A
 
 ---
 
-### 💻 Códigos e Práticas
+💻 CÓDIGOS E PRÁTICAS
 
-### 📐 Vetores e Estruturas
-* [`menu-operacoes-vetor.c`](./exercicios_aula/menu-operacoes-vetor.c) — Menu interativo com operações básicas em vetores em C.
-* [`sistema-garagem-vector.cpp`](./exercicios_aula/sistema-garagem-vector.cpp) — Gerenciamento de garagem e veículos com `std::vector`.
-* [`vetor_estatisticas.cpp`](./exercicios_aula/vetor_estatisticas.cpp) — Processamento e estatísticas sobre elementos de um vetor.
+### 📐 VETORES E ESTRUTURAS
+* [`menu-operacoes-vetor.c`](./codigos-aula/menu-operacoes-vetor.c) — Menu interativo com operações básicas em vetores em C.
+* [`sistema-garagem-vector.cpp`](./codigos-aula/sistema-garagem-vector.cpp) — Gerenciamento de garagem e veículos com `std::vector`.
+* [`vetor_estatisticas.cpp`](./codigos-aula/vetor_estatisticas.cpp) — Processamento e estatísticas sobre elementos de um vetor.
 
-### 🧩 Modularização e Funções
-* [`funcoes-e-vetores.cpp`](./exercicios_aula/funcoes-e-vetores.cpp) — Passagem de vetores como parâmetros em funções.
-* [`vetores-passagem-parametro.cpp`](./exercicios_aula/vetores-passagem-parametro.cpp) — Exemplos de manipulação de vetores via funções.
-* [`funcoes.h`](./exercicios_aula/funcoes.h) / [`metodo.h`](./exercicios_aula/metodo.h) — Arquivos de cabeçalho com protótipos e funções auxiliares.
+### 🧩 MODULARIZAÇÃO E FUNÇÕES
+* [`funcoes-e-vetores.cpp`](./codigos-aula/exercicios_aula/funcoes-e-vetores.cpp) — Passagem de vetores como parâmetros em funções.
+* [`vetores-passagem-parametro.cpp`](./codigos-aula/exercicios_aula/vetores-passagem-parametro.cpp) — Exemplos de manipulação de vetores via funções.
+* [`funcoes.h`](./codigos-aula/exercicios_aula/funcoes.h) / [`metodo.h`](./codigos-aula/exercicios_aula/metodo.h) — Arquivos de cabeçalho com protótipos e funções auxiliares.
 
-### 🔍 Validação de Dados
-* [`validar-formato-data.cpp`](./exercicios_aula/validar-formato-data.cpp) — Validação simples do formato de data (`dd/mm/aaaa`).
-* [`validar-tamanho-cpf.cpp`](./exercicios_aula/validar-tamanho-cpf.cpp) — Validação da quantidade de dígitos de um CPF (11 caracteres).
+### 🔍 VALIDAÇÃO DE DADOS
+* [`validar-formato-data.cpp`](./codigos-aula/validar-formato-data.cpp) — Validação simples do formato de data (`dd/mm/aaaa`).
+* [`validar-tamanho-cpf.cpp`](./codigos-aula/validar-tamanho-cpf.cpp) — Validação da quantidade de dígitos de um CPF (11 caracteres).
 
-### 📂 Manipulação de Arquivos (`<fstream>`)
-* [`busca-palavra-arquivo.cpp`](./exercicios_aula/busca-palavra-arquivo.cpp) — Leitura e busca de ocorrência de palavras em arquivos de texto.
-* [`leitura-csv-inflacao.cpp`](./exercicios_aula/leitura-csv-inflacao.cpp) — Processamento e leitura de dados estruturados em arquivo CSV.
+### 📂 MANIPULAÇÃO DE ARQUIVOS (`<fstream>`)
+* [`busca-palavra-arquivo.cpp`](./codigos-aula/busca-palavra-arquivo.cpp) — Leitura e busca de ocorrência de palavras em arquivos de texto.
+* [`leitura-csv-inflacao.cpp`](./codigos-aula/leitura-csv-inflacao.cpp) — Processamento e leitura de dados estruturados em arquivo CSV.
