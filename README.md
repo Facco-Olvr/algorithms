@@ -30,7 +30,7 @@ Repositório dedicado aos códigos, exercícios e anotações da disciplina de A
 
 ---
 
-##💻 Códigos e Práticas
+### 💻 Códigos e Práticas
 
 ### 📐 Vetores e Estruturas
 * [`menu-operacoes-vetor.c`](./exercicios_aula/menu-operacoes-vetor.c) — Menu interativo com operações básicas em vetores em C.
