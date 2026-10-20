@@ -15,6 +15,7 @@ Repositório dedicado aos códigos, exercícios e anotações da disciplina de A
   * [exercicios/arquivo/](./exercicios/arquivo/) — Exercícios de leitura e manipulação de arquivos (`<fstream>`).
   * [exercicios/modularizacao/](./exercicios/modularizacao/) — Exercícios divididos em arquivos de cabeçalho (`.h`) e execução (`main.cpp`).
   * [exercicios/structs/](./exercicios/structs/) — Exercícios práticos focados em registros e estruturas de dados (`struct`).
+* [projetos-pessoais/](./projetos-pessoais/) — Projetos autônomos, protótipos e experimentos de código (ex: RPG).
 
 ---
 
