@@ -26,7 +26,7 @@ Repositório dedicado aos códigos, exercícios e anotações da disciplina de A
 * 📄 [10/08/2026 - Vetores Dinâmicos (vector) e Structs](./anotacoes/2026-08-10.md)
 * 📄 [24/08/2026 - Manipulação de Arquivos em C++](./anotacoes/2026-08-24.md)
 * 📄 [24/08/2026 - Leitura de Arquivos em C++](./anotacoes/2026-09-14.md)
-* 📄 [24/08/2026 - Modularização e Funções em C++](./anotacoes/2026-09-28.md)Passagem de Parâmetros
+* 📄 [24/08/2026 - Modularização e Funções em C++](./anotacoes/2026-09-28.md)
 * 📄 [14/09/2026 - Passagem de Parâmetros](./anotacoes/2026-14-10.md)
 
 ---
