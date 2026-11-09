@@ -1,0 +1,4 @@
+struct
+metodo
+funcao
+vetor
