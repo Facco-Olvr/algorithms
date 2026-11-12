@@ -1,12 +1,14 @@
+
 #include <iostream>
 #include <string>
 #include <vector>
 #include <string>
+#include "academia.h"
 
 using namespace std;
 
 int main(){
-    vector<string> treino;
+    vector<ficha> listaAlunos;
     int opcao;
 
     do{
@@ -24,7 +26,8 @@ int main(){
             case 1:
 
         }
-    }
+    } while(opcao != 5);
 
     return 0;
 }
+
