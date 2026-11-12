@@ -5,21 +5,31 @@
 
 using namespace std;
 
-void cadastrarAluno(ficha){
+void cadastrarAluno(vector<ficha>& listaAlunos){
 
-    vector<treino> treino;
+    ficha novoAluno;
+
+    cin.ignore();
+
+    cout << "=== NOVO ALUNO ===\n";
 
     cout << "Informe o nome do aluno: \n";
-    getline(cin, nome);
+    getline(cin, novoAluno.nome);
+
     cout << "Informe o genero: \n";
-    cin >> genero;
+    getline(cin, novoAluno.genero);
+
     cout << "Informe a idade: \n";
-    cin >> idade;
-    cout << "Objetivo na academia: \n";
-    cin >> goals;
+    cin >> novoAluno.idade;
+    cin.ignore();
+
+    cout << "Objetivo na academia (ex: Hipertrofia, Emagrecimento): \n";
+    getline(cin, novoAluno.goals);
+
     cout << "Data de nascimento (dd\mm\aa): \n";
-    getline(cin, data_nas);
+    getline(cin, novoAluno.data_nas);
 
     cout << "Cadastro do aluno completo!!\n";
-}
 
+    for(int i = 0; int)
+}
