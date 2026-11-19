@@ -1,6 +1,6 @@
 #include<iostream>
 #include<string>
-#include "ficha.h"
+#include "academia.h"
 #include<vector>
 
 using namespace std;
@@ -20,16 +20,55 @@ void cadastrarAluno(vector<ficha>& listaAlunos){
     getline(cin, novoAluno.genero);
 
     cout << "Informe a idade: \n";
-    cin >> novoAluno.idade;
+    if(!(cin >> novoAluno.idade) || novoAluno.idade <= 0){
+        cout << "Idade invalida!! Tente novamente.\n";
+    }
     cin.ignore();
 
     cout << "Objetivo na academia (ex: Hipertrofia, Emagrecimento): \n";
     getline(cin, novoAluno.goals);
 
-    cout << "Data de nascimento (dd\mm\aa): \n";
+    cout << "Data de nascimento (dd/mm/aa): \n";
     getline(cin, novoAluno.data_nas);
+
+    cout << "Data de inscricao (dd/mm/aa): \n";
+    getline(cin, novoAluno.data_ins);
 
     cout << "Cadastro do aluno completo!!\n";
 
     for(int i = 0; int)
+}
+
+void consultarAluno(const vector<ficha>& listaAlunos){
+
+    if(listaAlunos.empty()){
+        cout << "Nenhum aluno cadastrado no sistema\n";
+    };
+    
+    string nomePesquisa;
+
+    bool encontrou =  false;
+
+    cout << "Informe o nome do aluno que deseja consultar: ";
+    getline(cin, nomePesquisa);
+
+    for(size_t i = 0; i < listaAlunos.size(); i++){
+        if(listaAlunos[i].nome == nomePesquisa){
+            encontrou = true;
+
+            cout << "=== INFORMACOES DO ALUNO ===\n";
+            cout << "Nome: " << listaAlunos[i].nome << "\n";
+            cout << "Genero: " << listaAlunos[i].genero << "\n";
+            cout << "Idade: " << listaAlunos[i].idade << "\n";
+            cout << "Data de nascimento: " << listaAlunos[i].data_nas << "\n";
+            cout << "Data de inscricao: " << listaAlunos[i].data_ins << "\n";
+            cout << "Objetivo: " << listaAlunos[i].goals << "\n";
+            cout << "Divisao de treino: " listaAlunos[i].divisaoTreino << "\n";
+
+        };
+    };
+
+    if(!encontrou){
+        cout << "Aluno nao consta no sistema\n";
+    }
 }
