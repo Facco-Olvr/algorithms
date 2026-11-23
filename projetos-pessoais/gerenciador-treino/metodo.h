@@ -22,6 +22,13 @@ void cadastrarAluno(vector<ficha>& listaAlunos){
     cout << "Informe a idade: \n";
     if(!(cin >> novoAluno.idade) || novoAluno.idade <= 0){
         cout << "Idade invalida!! Tente novamente.\n";
+        cin.clear();
+        return;
+    }
+    if(novoAluno.idade < 12){
+        cout << "Idade nao permitida para treino\n";
+        cin.clear();
+        return;
     }
     cin.ignore();
 
@@ -34,9 +41,27 @@ void cadastrarAluno(vector<ficha>& listaAlunos){
     cout << "Data de inscricao (dd/mm/aa): \n";
     getline(cin, novoAluno.data_ins);
 
-    cout << "Cadastro do aluno completo!!\n";
+    char montarTreino;
 
-    for(int i = 0; int)
+    cout << "Deseja montar o treino agora S/N? ";
+    cin >> montarTreino;
+
+    if(montarTreino == 's' || montarTreino == 'S' || montarTreino == 'SIM' || montarTreino == 'sim'){
+        int qtdexercicios;
+        if(!(cin >> qtdexercicios) || qtdexercicios <= 0){
+            cout << "Quantidade invalida!! Treino em branco.\n";
+        } else {
+            for(int i = 0; i < qtdexercicios; i++){
+                Treino itemTreino;
+
+                cout << "--- Exercicio " << i + 1 << " ---\n";
+            }
+        }
+
+    }
+
+    listaAlunos.push_back(novoAluno);
+    cout << "Cadastro do aluno completo!!\n";
 }
 
 void consultarAluno(const vector<ficha>& listaAlunos){
@@ -63,7 +88,7 @@ void consultarAluno(const vector<ficha>& listaAlunos){
             cout << "Data de nascimento: " << listaAlunos[i].data_nas << "\n";
             cout << "Data de inscricao: " << listaAlunos[i].data_ins << "\n";
             cout << "Objetivo: " << listaAlunos[i].goals << "\n";
-            cout << "Divisao de treino: " listaAlunos[i].divisaoTreino << "\n";
+            cout << "Divisao de treino: " << listaAlunos[i].divisaoTreino << "\n";
 
         };
     };
@@ -73,7 +98,7 @@ void consultarAluno(const vector<ficha>& listaAlunos){
     }
 }
 
-void listarAlunos(cons vector<ficha>& listaAlunos){
+void listarAlunos(const vector<ficha>& listaAlunos){
     if(listaAlunos.empty()){
         cout << "Nenhum aluno cadastrado.\n";
         return;
