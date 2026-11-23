@@ -1,33 +1,62 @@
-
 #include <iostream>
 #include <string>
 #include <vector>
-#include <string>
-#include "academia.h"
+#include "metodo.h"
 
 using namespace std;
 
-int main(){
+int main() {
     vector<ficha> listaAlunos;
+    carregarBase(listaAlunos);
+
     int opcao;
 
-    do{
-
-        cout << "=== Menu de Academia ===\n";
+    do {
+        cout << "\n=== Menu de Academia ===\n";
         cout << "1 - Cadastrar Aluno\n";
         cout << "2 - Listar alunos\n";
-        cout << "3 - Exibir ficha de aluno\n";
-        cout << "4 - Apagar dados de aluno\n";
-        cout << "5 - Encerrar sistema\n";
+        cout << "3 - Consultar aluno\n";
+        cout << "4 - Montar/Editar treino\n";
+        cout << "5 - Apagar dados de aluno\n";
+        cout << "6 - Encerrar sistema\n";
+        cout << "Escolha uma opcao: ";
         cin >> opcao;
+        cin.ignore(1000, '\n');
 
-        switch (opcao){
-            
+        switch (opcao) {
             case 1:
+                cadastrarAluno(listaAlunos);
+                atualizarBase(listaAlunos);
+                break;
 
+            case 2:
+                listarAlunos(listaAlunos);
+                break;
+
+            case 3:
+                consultarAluno(listaAlunos);
+                break;
+
+            case 4:
+                editarTreino(listaAlunos);
+                atualizarBase(listaAlunos);
+                break;
+
+            case 5:
+                apagarAluno(listaAlunos);
+                atualizarBase(listaAlunos);
+                break;
+
+            case 6:
+                cout << "Encerrando sistema...\n";
+                break;
+
+            default:
+                cout << "Opcao invalida! Tente novamente.\n";
+                break;
         }
-    } while(opcao != 5);
+
+    } while (opcao != 6);
 
     return 0;
 }
-
