@@ -21,7 +21,7 @@ int main() {
         cout << "6 - Encerrar sistema\n";
         cout << "Escolha uma opcao: ";
         cin >> opcao;
-        cin.ignore(1000, '\n');
+        cin.ignore();
 
         switch (opcao) {
             case 1:
