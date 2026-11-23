@@ -72,3 +72,18 @@ void consultarAluno(const vector<ficha>& listaAlunos){
         cout << "Aluno nao consta no sistema\n";
     }
 }
+
+void listarAlunos(cons vector<ficha>& listaAlunos){
+    if(listaAlunos.empty()){
+        cout << "Nenhum aluno cadastrado.\n";
+        return;
+    }
+
+    cout << "\n=== LISTA DE ALUNOS ===\n";
+    for(size_t i = 0; i < listaAlunos.size(); i++){
+        cout << i + 1 << " - Nome: " << listaAlunos[i].nome
+             << " | Idade: " << listaAlunos[i].idade
+             << " | Genero: " << listaAlunos[i].genero
+             << " | Objetivo: " << listaAlunos[i].goals << "\n";
+    }
+}
