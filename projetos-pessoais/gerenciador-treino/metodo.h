@@ -67,23 +67,24 @@ void atualizarBase(vector<ficha> listaAlunos) {
     }
 
     for (size_t i = 0; i < listaAlunos.size(); i++) {
-        arquivo << listaAlunos[i].nome << "\n";
-        arquivo << listaAlunos[i].data_nas << "\n";
-        arquivo << listaAlunos[i].data_ins << "\n";
-        arquivo << listaAlunos[i].goals << "\n";
-        arquivo << listaAlunos[i].genero << "\n";
-        arquivo << listaAlunos[i].divisao << "\n";
-        arquivo << listaAlunos[i].idade << "\n";
+        arquivo << listaAlunos[i].nome << ",";
+        arquivo << listaAlunos[i].data_nas << ",";
+        arquivo << listaAlunos[i].data_ins << ",";
+        arquivo << listaAlunos[i].goals << ",";
+        arquivo << listaAlunos[i].genero << ",";
+        arquivo << listaAlunos[i].divisao << ",";
+        arquivo << listaAlunos[i].idade << ",";
 
         size_t qtdEx = listaAlunos[i].listaExercicios.size();
-        arquivo << qtdEx << "\n";
+        arquivo << qtdEx << ",";
 
         for (size_t j = 0; j < qtdEx; j++) {
-            arquivo << listaAlunos[i].listaExercicios[j].exercicio << "\n";
-            arquivo << listaAlunos[i].listaExercicios[j].divisao << "\n";
-            arquivo << listaAlunos[i].listaExercicios[j].reps << "\n";
-            arquivo << listaAlunos[i].listaExercicios[j].series << "\n";
+            arquivo << listaAlunos[i].listaExercicios[j].exercicio << ",";
+            arquivo << listaAlunos[i].listaExercicios[j].divisao << ",";
+            arquivo << listaAlunos[i].listaExercicios[j].reps << ",";
+            arquivo << listaAlunos[i].listaExercicios[j].series << ",";
         }
+        arquivo << "\n";
     }
 
     arquivo.close();
@@ -93,18 +94,21 @@ void cadastrarAluno(vector<ficha>& listaAlunos){
 
     ficha novoAluno;
 
-    cin.ignore();
-
     cout << "=== NOVO ALUNO ===\n";
 
     cout << "Informe o nome do aluno: \n";
     getline(cin, novoAluno.nome);
+    
 
     cout << "Informe o genero: \n";
     getline(cin, novoAluno.genero);
+    
 
     cout << "Informe a idade: \n";
-    if(!(cin >> novoAluno.idade) || novoAluno.idade <= 0){
+    cin >> novoAluno.idade;
+    cin.ignore();
+
+    if(novoAluno.idade <= 0){
         cout << "Idade invalida!! Tente novamente.\n";
         cin.clear();
         return;
@@ -114,27 +118,32 @@ void cadastrarAluno(vector<ficha>& listaAlunos){
         cin.clear();
         return;
     }
-    cin.ignore();
+    
 
     cout << "Objetivo na academia (ex: Hipertrofia, Emagrecimento): \n";
     getline(cin, novoAluno.goals);
 
     cout << "Data de nascimento (dd/mm/aa): \n";
     getline(cin, novoAluno.data_nas);
+    
 
     cout << "Data de inscricao (dd/mm/aa): \n";
     getline(cin, novoAluno.data_ins);
+    
 
     char montarTreino;
 
     cout << "Deseja montar o treino agora S/N? ";
     cin >> montarTreino;
+    cin.ignore();
 
     if(montarTreino == 's' || montarTreino == 'S'){
 
         int qtdexercicios;
         cout << "Informe a quantidade de exercicios que deseja cadastrar: \n";
-        if(!(cin >> qtdexercicios) || qtdexercicios <= 0){
+        cin >> qtdexercicios;
+        cin.ignore();
+        if (qtdexercicios <= 0){
             cout << "Quantidade invalida!! Treino em branco.\n";
         } else {
             for(int i = 0; i < qtdexercicios; i++){
@@ -149,14 +158,18 @@ void cadastrarAluno(vector<ficha>& listaAlunos){
                 getline(cin, itemTreino.exercicio);
 
                 cout << "Informe a quantidade de series: \n";
-                if(!(cin >> itemTreino.series) || itemTreino.series <= 0){
+                cin >> itemTreino.series;
+                cin.ignore();
+                if(itemTreino.series <= 0){
                     cout << "Quantidade de series invalida!! Treino em branco.\n";
                     cin.clear();
                     break;
                 }
 
                 cout << "Informe a quantidade de repeticoes: \n";
-                if(!(cin >> itemTreino.reps) || itemTreino.reps <= 0){
+                cin >> itemTreino.reps;
+                cin.ignore();
+                if(itemTreino.reps <= 0){
                     cout << "Quantidade de repeticoes invalida!! Treino em branco.\n";
                     cin.clear();
                     break;
