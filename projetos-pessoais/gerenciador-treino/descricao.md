@@ -1,4 +1,0 @@
-struct
-metodo
-funcao
-vetor
