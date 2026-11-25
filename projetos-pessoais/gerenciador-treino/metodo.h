@@ -31,11 +31,11 @@ void carregarBase(vector<ficha>& listaAlunos) {
         getline(arquivo, aluno.divisao);
 
         arquivo >> aluno.idade;
-        arquivo.ignore(1000, '\n');
+        arquivo.ignore();
 
         size_t qtdEx = 0;
         arquivo >> qtdEx;
-        arquivo.ignore(1000, '\n');
+        arquivo.ignore();
 
         aluno.listaExercicios.clear();
         for (size_t j = 0; j < qtdEx; j++) {
@@ -44,10 +44,10 @@ void carregarBase(vector<ficha>& listaAlunos) {
             getline(arquivo, item.divisao);
 
             arquivo >> item.reps;
-            arquivo.ignore(1000, '\n');
+            arquivo.ignore();
 
             arquivo >> item.series;
-            arquivo.ignore(1000, '\n');
+            arquivo.ignore();
 
             aluno.listaExercicios.push_back(item);
         }
@@ -138,6 +138,67 @@ void cadastrarAluno(vector<ficha>& listaAlunos){
     cin.ignore();
 
     if(montarTreino == 's' || montarTreino == 'S'){
+        
+        int opcaoTreino;
+
+        do{
+            cout << "--- Escolha a divisao de treino do aluno ---";
+            cout << "1 - ABC(Push/Pull/Leg)";
+            cout << "2 - ABCD(Upper/Low)";
+            cout << "3 - ABCDE";
+            cout << "4 - Upper/Low";
+            cout << "5 - Full Body";
+            cin opcaoTreino;
+            cin.ignore();
+
+            switch{
+                case 1:{
+                    treino push; pull; leg;
+                    int qtdexercicios;
+
+                    cout << "--- ABC(Push/Pull/Leg) ---\n";
+                    
+                    cout << "-- PUSH --\n";
+                    do{
+                        cout << "Informe o nome do exercicio (0 para sair): ";
+                        getline(cin, push.divisao);
+
+                        cout << "Informe a quantidade de series (0 para sair): ";
+                        cin >> push.divisao;
+
+                        cout << "Informe a quantidade de repeticoes (0 para fechar): ";
+                        cin >> push.divisao;
+
+                    }while(push = 0);
+                    
+                    cout << "-- PULL --\n";
+                    do{
+                        cout << "Informe o nome do exercicio (0 para sair): ";
+                        getline(cin, pull.divisao);
+
+                        cout << "Informe a quantidade de series (0 para sair): ";
+                        cin >> pull.divisao;
+
+                        cout << "Informe a quantidade de repeticoes (0 para sair): ";
+                        cin << pull.divisao;
+
+                    }while(pull = 0);
+
+                    cout << "-- LEGS --\n";
+                    do{
+                        cout << "Informe o nome do exercicio (0 para sair): ";
+                        getline(cin, leg.divisao);
+
+                        cout << "Informe a quantidade de series (0 para sair): ";
+                        cin >> leg.divisao;
+
+                        cout << "Informe a quantidade de repeticoes (0 para sair): ";
+                        cin << leg.divisao;
+
+                    }while(leg = 0);
+                }
+            }
+        }
 
         int qtdexercicios;
         cout << "Informe a quantidade de exercicios que deseja cadastrar: \n";
@@ -338,29 +399,3 @@ void editarTreino(vector<ficha>& listaAlunos){
 }
 
 void apagarAluno(vector<ficha>& listaAlunos){
-
-    if(listaAlunos.empty()){
-        cout << "Nenhum aluno cadastrado no sistema\n";
-        return;
-    }
-
-    string nomePesquisa;
-
-    bool encontrou =  false;
-
-    cout << "Informe o nome do aluno que deseja apagar: ";
-    getline(cin, nomePesquisa);
-
-    for(size_t i = 0; i < listaAlunos.size(); i++){
-        if(listaAlunos[i].nome == nomePesquisa){
-            encontrou = true;
-            listaAlunos.erase(listaAlunos.begin() + i);
-            cout << "Aluno removido com sucesso!\n";
-            break;
-        };
-    };
-
-    if(!encontrou){
-        cout << "Aluno nao consta no sistema\n";
-    } 
-}   
