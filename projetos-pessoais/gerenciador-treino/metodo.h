@@ -399,3 +399,29 @@ void editarTreino(vector<ficha>& listaAlunos){
 }
 
 void apagarAluno(vector<ficha>& listaAlunos){
+
+    if(listaAlunos.empty()){
+        cout << "Nenhum aluno cadastrado no sistema\n";
+        return;
+    }
+
+    string nomePesquisa;
+
+    bool encontrou =  false;
+
+    cout << "Informe o nome do aluno que deseja apagar: ";
+    getline(cin, nomePesquisa);
+
+    for(size_t i = 0; i < listaAlunos.size(); i++){
+        if(listaAlunos[i].nome == nomePesquisa){
+            encontrou = true;
+            listaAlunos.erase(listaAlunos.begin() + i);
+            cout << "Aluno removido com sucesso!\n";
+            break;
+        };
+    };
+
+    if(!encontrou){
+        cout << "Aluno nao consta no sistema\n";
+    } 
+}   
