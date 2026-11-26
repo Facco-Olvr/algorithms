@@ -154,7 +154,6 @@ void cadastrarAluno(vector<ficha>& listaAlunos){
             switch{
                 case 1:{
                     treino push; pull; leg;
-                    int qtdexercicios;
 
                     cout << "--- ABC(Push/Pull/Leg) ---\n";
                     
@@ -165,9 +164,11 @@ void cadastrarAluno(vector<ficha>& listaAlunos){
 
                         cout << "Informe a quantidade de series (0 para sair): ";
                         cin >> push.divisao;
+                        cin.ignore();
 
                         cout << "Informe a quantidade de repeticoes (0 para fechar): ";
                         cin >> push.divisao;
+                        cin.ignore();
 
                     }while(push = 0);
                     
@@ -178,9 +179,11 @@ void cadastrarAluno(vector<ficha>& listaAlunos){
 
                         cout << "Informe a quantidade de series (0 para sair): ";
                         cin >> pull.divisao;
+                        cin.ignore();
 
                         cout << "Informe a quantidade de repeticoes (0 para sair): ";
                         cin << pull.divisao;
+                        cin.ignore();
 
                     }while(pull = 0);
 
@@ -191,11 +194,66 @@ void cadastrarAluno(vector<ficha>& listaAlunos){
 
                         cout << "Informe a quantidade de series (0 para sair): ";
                         cin >> leg.divisao;
+                        cin.ignore();
 
                         cout << "Informe a quantidade de repeticoes (0 para sair): ";
                         cin << leg.divisao;
+                        cin.ignore();
 
                     }while(leg = 0);
+                }
+                case 2: {
+                    treino upper1, low1, upper2, low2;
+
+                    cout << "--- UPPER 1 ---\n";
+
+                    do{
+                        cout << "Informe o nome do exercicio (0 para sair): ";
+                        getline(cin, upper1.divisao);
+
+                        cout << "Informe a quantidade de series (0 para sair): ";
+                        cin >> upper1.divisao;
+                        cin.ignore();
+
+                        cout << "Informe a quantidade de repeticoes (0 para sair): ";
+                        cin.ignore();
+
+                    }while(upper1 = 0);
+
+                    cout << "--- LOW 1 ---\n";
+
+                    do{
+
+                        treino low1;
+
+                        cout << "Informe o nome do exercicio (0 para sair): ";
+                        getline(cin, low1.divisao);
+
+                        cout << "Informe o numero de series (0 para sair): ";
+                        cin >> low1.divisao;
+                        cin.ignore();
+
+                        cout << "Informe o numero de repeticoes (0 para sair): ";
+                        cin >> low1.divisao;
+                        cin.ignore();
+
+                    }while(low1 = 0);
+
+                    cout << "--- UPPER 2 ---\n";
+
+                    do{
+                        cout << "Informe o nome do exercicio (0 para sair): ";
+                        getline(cin, low2.divisao);
+
+                        cout << "Informe o numero de series (0 para sair): ";
+                        cin >> low2.divisao;
+                        cin.ignore();
+
+                        cout << "Informe o numero de repeticoes (0 para sair): ";
+                        cin >> low2.divisao;
+                        cin.ignore();
+                    }
+
                 }
             }
         }
@@ -243,7 +301,6 @@ void cadastrarAluno(vector<ficha>& listaAlunos){
     listaAlunos.push_back(novoAluno);
     cout << "Cadastro do aluno completo!!\n";
 }
-
 void consultarAluno(const vector<ficha>& listaAlunos){
 
     if(listaAlunos.empty()){
